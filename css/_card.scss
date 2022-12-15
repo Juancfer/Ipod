@@ -1,0 +1,72 @@
+.card {
+    width: 405px;
+    background-color: $color-card-1;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    margin: $spacing;
+    padding: $spacing;
+    overflow: hidden;
+
+    &__image{
+        width: 40%;
+        display: block;
+        margin: auto;
+        padding: $spacing;
+    }
+
+    &__title{
+        margin: 0 auto;
+        color: $color-primary;
+        text-transform: uppercase;
+        font-size: 27px;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    &__subtitle{
+        color: $color-primary;
+        margin: $spacing 0;
+        font-size: 23px;
+        font-weight: lighter;
+    }
+
+    &__copy{
+        color: $color-secondary;
+        font-weight: lighter;
+        font-size: 11px;
+    }
+
+    &__footer{
+        @include flexible;
+    }
+
+    &__button{
+        color: $color-primary;
+        background-color: $color-card-1;
+        border: 1px solid $color-primary;
+        font-size: 12px;
+
+        &:hover{
+            background-color: $color-primary;
+            color: $color-card-1;   
+        }
+    }
+
+    &--reverse{
+        background-color: $color-primary;
+        .card__title, .card__subtitle{
+            color: $color-card-1;
+        }
+
+        .card__button{
+            color:  $color-card-1;
+            background-color: $color-primary;
+            border: 1px solid $color-card-1;
+
+            &:hover{
+                background-color: $color-card-1;
+                color:  $color-primary;
+            }
+        }
+    }
+}
